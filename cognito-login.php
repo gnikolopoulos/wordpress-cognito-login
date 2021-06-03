@@ -84,6 +84,8 @@ class Cognito_Login{
       if ( $user === FALSE ) return;
     }
 
+    if ( $user !== FALSE ) Cognito_Login_User::update_user( $user, $parsed_token );
+
     // Log the user in! Exit if the login fails
     if ( Cognito_Login_Programmatic_Login::login( $username ) === FALSE ) return;
 

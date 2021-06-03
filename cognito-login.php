@@ -1,11 +1,11 @@
 <?php
 /*
   Plugin Name: Cognito Login
-  Plugin URI: https://github.com/Trifoia/wordpress-cognito-login
+  Plugin URI: https://github.com/gnikolopoulos/wordpress-cognito-login
   description: WordPress plugin for integrating with Cognito for User Pools
   Version: 1.3.0
-  Author: Trifoia
-  Author URI: https://trifoia.com
+  Author: George Nikolopoulos
+  Author URI: https://www.interactive-design.gr
 */
 
 define( 'PLUGIN_PATH', plugin_dir_path( __FILE__ ) );

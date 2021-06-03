@@ -96,6 +96,10 @@ class Cognito_Login{
         case 'standard':
           Cognito_Login_Auth::redirect_to( get_home_url() . '/exp/standard' );
           break;
+
+        case 'ridemodes':
+          Cognito_Login_Auth::redirect_to( 'ridemodes.goiveee.com?user='.$username );
+          break;
         
         default:
           Cognito_Login_Auth::redirect_to( $homepage );

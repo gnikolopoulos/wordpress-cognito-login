@@ -92,7 +92,15 @@ class Cognito_Login{
     // Redirect the user to the "homepage", if it is set (this will hide all `print` statements)
     $homepage = get_option('homepage');
     if ( !empty( $homepage ) ) {
-      Cognito_Login_Auth::redirect_to( $homepage );
+      switch ($parsed_token['custom:RideType']) {
+        case 'standard':
+          Cognito_Login_Auth::redirect_to( get_home_url() . '/exp/standard' );
+          break;
+        
+        default:
+          Cognito_Login_Auth::redirect_to( $homepage );
+          break;
+      }
     }
   }
 
